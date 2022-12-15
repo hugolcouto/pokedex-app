@@ -1,0 +1,23 @@
+@keyframes rotationAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translate(30%, 30%);
+    z-index: -1;
+    user-select: none !important;
+
+    > svg {
+        animation: rotationAnimation 10s infinite linear;
+        width: 1200px;
+        height: 1200px;
+    }
+}
