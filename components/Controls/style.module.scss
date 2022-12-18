@@ -1,0 +1,47 @@
+.controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    > button {
+        appearance: none !important;
+        cursor: pointer;
+        display: flex;
+        width: 42px;
+        height: 42px;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        box-shadow: 0px 2px 2px $color-shadow;
+        transition: 0.3s;
+
+        > svg {
+            fill: $color-selector-text;
+        }
+
+        &:hover {
+            transition: 0.3s;
+            background-color: darken($color-pokedex, 15);
+        }
+
+        &.search {
+            background-color: $color-pokedex;
+
+            &:hover {
+                background-color: darken($color-pokedex, 15);
+            }
+        }
+
+        &.filter {
+            background-color: $color-moves;
+
+            &:hover {
+                background-color: darken($color-moves, 15);
+            }
+        }
+    }
+}

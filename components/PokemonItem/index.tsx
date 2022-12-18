@@ -25,7 +25,10 @@ export const PokemonItem = ({
                         <h5>{japaneseName}</h5>
                     </div>
                     <div className={style.types}>
-                        <span className={`${style[firstType]}`}>
+                        <span
+                            className={`${style[firstType]}`}
+                            title={firstType}
+                        >
                             <img
                                 src={`pkmntypes/${firstType}.svg`}
                                 alt={firstType}
@@ -34,7 +37,10 @@ export const PokemonItem = ({
                             />
                         </span>
                         {secondType && (
-                            <span className={`${style[secondType]}`}>
+                            <span
+                                className={`${style[secondType]}`}
+                                title={secondType}
+                            >
                                 <img
                                     src={`pkmntypes/${secondType}.svg`}
                                     alt={secondType}

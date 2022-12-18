@@ -1,5 +1,6 @@
 import { PokeballBackground } from "components/PokeballBackground";
 import { PokemonList } from "components/PokemonList";
+import { Controls } from "components/Controls";
 
 interface Props {
     pokemonList: Array<{
@@ -13,10 +14,9 @@ interface Props {
 }
 
 const Pokedex = ({ pokemonList }: Props) => {
-    console.log(pokemonList);
     return (
         <>
-            <h1>Pokedex</h1>
+            <Controls />
             <PokemonList list={pokemonList} />
             <PokeballBackground />
         </>
